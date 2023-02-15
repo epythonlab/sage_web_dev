@@ -16,8 +16,9 @@ To be successful in this web development, there are a number of technologies tha
 3. How to use bootstrap in html?
 
 4. What's the uses of bootstrap and css?
+5. How to use dev tools in web browser?
 
-5. What is the uses of Javascript?
+7. What is the uses of Javascript?
 
 6. Which of the following is the correct way to declare a variable in JavaScript? (assume each line is run in isolation)
   var name = 'Asibeh'
@@ -29,5 +30,18 @@ To be successful in this web development, there are a number of technologies tha
   
   how to correctly access the string 'Paster'?
       locations[2];
+9. What is DOM?
+      Remember that a JavaScript object is a tree-like structure that has properties and values. 
+      
+      The DOM stands for "Document Object Model" and is a tree-like structure that is a representation of the HTML document, the relationship between elements, and contains the content and properties of the elements.
+
+  The DOM is not:
+
+  part of the JavaScript language
+  The DOM is:
+
+  constructed from the browser is globally accessible by JavaScript code using the document object
+  
+  The DOM is used all of the time and is what we'll be using throughout this course!
  
 
