@@ -27,7 +27,7 @@ To be successful in this web development, there are a number of technologies tha
   set(name:'Asibeh')
 7. Let's assume list of locations:
 
-      const locations = ['Bole', 'Piasa', 'Paster', '4 Kilo', '5 Kilo', '6 Kilo'];
+        const locations = ['Bole', 'Piasa', 'Paster', '4 Kilo', '5 Kilo', '6 Kilo'];
   
   how to correctly access the string 'Paster'?
   
