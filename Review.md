@@ -26,10 +26,13 @@ To be successful in this web development, there are a number of technologies tha
   name: 'Asibeh'
   set(name:'Asibeh')
 7. Let's assume list of locations:
-  const locations = ['Bole', 'Piasa', 'Paster', '4 Kilo', '5 Kilo', '6 Kilo'];
+
+      const locations = ['Bole', 'Piasa', 'Paster', '4 Kilo', '5 Kilo', '6 Kilo'];
   
   how to correctly access the string 'Paster'?
+  
       locations[2];
+      
 9. What is DOM?
       Remember that a JavaScript object is a tree-like structure that has properties and values. 
       
