@@ -20,6 +20,26 @@ To be successful in this web development, there are a number of technologies tha
 
 7. What is the uses of Javascript?
 
+8. Java Script Real Life Objects, Properties, and Methods
+       In real life, a car is an object.
+
+       A car has properties like weight and color, and methods like start and stop:
+       Object: car  Properties	Methods
+	
+              car.name = Fiat             car.start()
+
+              car.model = 500             car.drive()
+
+              car.weight = 850kg          car.brake()
+
+              car.color = white	       car.stop()
+              
+
+   All cars have the same properties, but the property values differ from car to car.
+
+       All cars have the same methods, but the methods are performed at different times.\
+
+
 6. Which of the following is the correct way to declare a variable in JavaScript? (assume each line is run in isolation)
 
        var name = 'Asibeh'
