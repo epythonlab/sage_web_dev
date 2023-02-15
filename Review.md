@@ -21,10 +21,11 @@ To be successful in this web development, there are a number of technologies tha
 7. What is the uses of Javascript?
 
 6. Which of the following is the correct way to declare a variable in JavaScript? (assume each line is run in isolation)
-  var name = 'Asibeh'
-  const name = 'Asibeh'
-  name: 'Asibeh'
-  set(name:'Asibeh')
+
+       var name = 'Asibeh'
+        const name = 'Asibeh'
+        name: 'Asibeh'
+        set(name:'Asibeh')
 7. Let's assume list of locations:
 
         const locations = ['Bole', 'Piasa', 'Paster', '4 Kilo', '5 Kilo', '6 Kilo'];
