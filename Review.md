@@ -1,4 +1,11 @@
-# Review Web Development
+# Review of Web Development
+
+Being Successful
+To be successful in this web development, there are a number of technologies that you need to know how to use:
+
+- HTML
+- CSS
+- JavaScript
 
 1. Mention some examples of html elements?
 2. Give some examples of html attributes?
