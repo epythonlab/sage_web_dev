@@ -1,13 +1,25 @@
 # Review Web Development
 
-Mention some examples of html elements?
+1. Mention some examples of html elements?
+2. Give some examples of html attributes?
 
-Identify css id, class?
+2. Identify css id, class?
 
-How to use bootstrap in html?
+3. How to use bootstrap in html?
 
-What's the uses of bootstrap and css?
+4. What's the uses of bootstrap and css?
 
-What is the uses of Javascript?
+5. What is the uses of Javascript?
 
-Which of the following is the correct way to declare a variable in JavaScript? (assume each line is run in isolation)
+6. Which of the following is the correct way to declare a variable in JavaScript? (assume each line is run in isolation)
+  var name = 'Asibeh'
+  const name = 'Asibeh'
+  name: 'Asibeh'
+  set(name:'Asibeh')
+7. Let's assume list of locations:
+  const locations = ['Bole', 'Piasa', 'Paster', '4 Kilo', '5 Kilo', '6 Kilo'];
+  
+  how to correctly access the string 'Paster'?
+      locations[2];
+ 
+
