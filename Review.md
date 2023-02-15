@@ -40,11 +40,11 @@ To be successful in this web development, there are a number of technologies tha
 
   The DOM is not:
 
-  part of the JavaScript language
+  - part of the JavaScript language
   The DOM is:
 
-  constructed from the browser is globally accessible by JavaScript code using the document object
+  - constructed from the browser is globally accessible by JavaScript code using the document object
   
-  The DOM is used all of the time and is what we'll be using throughout this course!
+  - The DOM is used all of the time and is what we'll be using throughout this course!
  
 
