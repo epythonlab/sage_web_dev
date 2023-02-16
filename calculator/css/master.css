@@ -1,0 +1,76 @@
+/* the following is the css code for beautifying the calculator UI */
+*{
+  padding:0; /* padding is the amount of inner space an element has */
+  margin:0; /* margin is the whitespace available surrounding an element */
+  font-family:'Source Sans Pro' sansrif;
+
+}
+body{
+
+  display:grid;
+  height:100vh;
+
+  /*
+    vh represents the viewport-percentage length unit based on the browser default viewport size.
+    vw. Represents a percentage of the width of the viewport's initial containing block.
+    1vw is 1% of the viewport width.
+    For example, if the viewport width is 800px,
+    then a value of 50vw on a property will be 400px
+  */
+  place-items:center;
+}
+/* the main container of the calculator UI */
+.main{
+  width:320px;
+  height:450px;
+  background-color: #000002;
+  position:absolute;
+  /*
+  The position CSS property sets how an element is positioned in a document.
+  The top, right, bottom, and left properties determine the final location of positioned elements.
+  position: static;
+  position: relative; top:40px,
+  */
+  border: 5px solid black;
+  border-radius:5px;
+}
+.main input[type='text']{
+  width:88%;
+  position: relative;
+  height: 80px;
+  top:5px;
+  text-align: right;
+  padding: 3px 6px;
+  outline: none;
+  font-size: 40px;
+  border: 5px solid black;
+  display: flex;
+  margin: auto;
+  border-radius: 6px;
+  color: black;
+
+}
+.btn input[type='button']{
+  width:70px;
+  padding: 20px;
+  margin: 2px 0px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  left:13px;
+  top: 20px;
+  height: 60px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.5s;
+  background-color: #191b1a;
+  border-radius: 6px;
+  color: white;
+
+}
+
+.btn input[type='button']:hover{
+  background-color: black;
+  color: white;
+}
