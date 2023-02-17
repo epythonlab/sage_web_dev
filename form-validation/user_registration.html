@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width:device-width; initial-scale:0.1">
+    <title>User Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Sage Training Institute User Registration</h2>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputName">Full Name</label>
+          <input type="text" class="form-control" id="exampleInputName"
+                 placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1"
+                pattern=".+@gmail\.com" placeholder="Enter email"
+                title='Please enter a valid email address'>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone number</label>
+          <input type="tel" class="form-control" placeholder="Enter phone number"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
+                title='Please enter your phone number in the correct format'>
+              <small class="form-text text-muted">Format: 251-900-7890</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="psw" placeholder="Password"
+                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                 title="Password must contain at least one number and one uppercase and lowercase letter,
+                 and at least 8 or more characters" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+  </body>
+</html>

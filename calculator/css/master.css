@@ -2,7 +2,7 @@
 *{
   padding:0; /* padding is the amount of inner space an element has */
   margin:0; /* margin is the whitespace available surrounding an element */
-  font-family:'Source Sans Pro' sansrif;
+  font-family: sansrif;
 
 }
 body{
@@ -57,7 +57,6 @@ body{
   position: relative;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   left:13px;
   top: 20px;
   height: 60px;
