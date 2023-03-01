@@ -1,0 +1,18 @@
+/* one dimensional css flexbox */
+body{
+  background-color: #191b1a
+}
+.wraper{
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wraper > div{
+  flex: 1 1 120px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+}

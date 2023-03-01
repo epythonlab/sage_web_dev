@@ -1,0 +1,33 @@
+body{
+  background-color: white;
+  margin: auto;
+}
+h1{
+  color: blue;
+}
+p{
+  color: red;
+}
+/* css box model the main container */
+
+main{
+  width: 400px;
+  border: 15px solid blue;
+  padding: 50px;
+  margin: 20px;
+}
+p{
+  color: #19b133;
+  font-size: 15px;
+  font-style: italic;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: 20px;
+  text-align: center;
+}
+/* using media query */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+}
