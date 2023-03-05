@@ -1,0 +1,168 @@
+/* SET ALL CSS PROPERTIES FOR LOGIN */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background: linear-gradient(90deg, #8c6a55, #7a3c16);
+	overflow: hidden;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+  justify-content: center;
+  height: 100vh;
+	min-width: 100%;
+}
+
+.screen {
+	background: linear-gradient(90deg, #a7682c, #7a3c16);
+	position: relative;
+	height: 600px;
+	width: 360px;
+	box-shadow: 0px 0px 24px #a7682c;
+	border-radius: 12px;
+
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;
+
+}
+
+.screen__background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);
+}
+
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: #fff;
+	top: -50px;
+	right: 120px;
+	border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: #a7682c;
+	top: -172px;
+	right: 0;
+	border-radius: 32px;
+}
+
+.screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background: linear-gradient(270deg, #0a0a09, #7a3c16);
+	top: -24px;
+	right: 0;
+	border-radius: 32px;
+}
+
+.screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: #a7682c;
+	top: 420px;
+	right: 50px;
+	border-radius: 60px;
+}
+
+.login {
+	width: 360px;
+	padding: 30px;
+	padding-top: 116px;
+	margin-bottom: 10%;
+}
+
+.login__field {
+	padding: 20px 0px;
+	position: relative;
+}
+
+.login__icon {
+	position: absolute;
+	top: 42px;
+	color: #f1b756;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #f1b756;
+	background: none;
+	padding:10px;
+	padding-left: 14px;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #f1b756;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #f1b756;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 95%;
+	color: #f1b756;
+	box-shadow: 0px 2px 2px #f1b756;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #f1b756;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #f1b756;
+}
+
+@media(max-width: 458px) {
+
+  .container{
+		max-width: 100%;
+		overflow: hidden;
+  }
+	.screen {
+		margin-bottom: 15%;
+	}
+
+}
