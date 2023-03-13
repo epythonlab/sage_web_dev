@@ -8,15 +8,17 @@ import AjaxApi from './AjaxApi';
 // import your newly created function component here
 import BmiCalculator from './Bmi';
 
-
 import Login from './components/login/Login'; // Login component from components
 
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
   <React.StrictMode>
-    <Login />
+      <App />
+
+
   </React.StrictMode>
 );
 
