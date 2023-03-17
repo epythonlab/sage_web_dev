@@ -28,7 +28,7 @@ import {useState} from 'react';
   TIP: In a large application, it is strongly recommended that
       you would add these to a separate directory
 
-  the function will take credentials as an argumentm, then it will call
+  the function will take credentials as an argument, then it will call
   the fetch method using the POST option
 */
 async function loginUser(credentials){
@@ -103,8 +103,9 @@ function Login({setToken}){
 
   );
 }
+export default Login;
+
 // assign the propTypes property
 Login.propTypes = {
   setToken: PropTypes.func.isRequired
 };
-export default Login;
