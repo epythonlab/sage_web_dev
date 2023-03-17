@@ -17,9 +17,7 @@
 function Dashboard(){
 
   return (
-    <div className='container'>
-      <h2> Welcome to dashboard page </h2>
-    </div>
+      <h2> Welcome to dashboard page</h2>
   );
 }
 export default Dashboard

@@ -1,44 +1,61 @@
 /*
-    Create a LOCALE API to fetch a user token
-    This API will build using Node.js with express.js
-    that will return a user token
-    you will then call this api from your react login page
-    and render the component after successfully retreived the User
-    token from the local api
-  FIRST:
-      INSTALL express and cors
-      `npm install --save-dev express cors`
-      CORS - this library will enable cross origin resource sharing for all routes
-    WARNING: do not enable CORS for all routes in a production apps
-            This can lead to security vulnerabilities.
+  configure server
+    -create the server.js in the nodejs project
+    root directory
 */
-// import required modules here
+
+// import required modules
 const express = require('express');
-const cors = require('cors');
+const mongoose = require('mongoose');
+const cors = require('cors')
+const bodyParser = require('body-parser');
+const dbConfig = require('./database/db') // import the db.js module
+
+// import routes of applicant
+const applicantRoute = require('./routes/applicant.routes');
+
+// configure the MongoDB database
+//mongoose.set('useNewUrlParser', true);
+//mongoose.set('useFindAndModify', true);
+//mongoose.set('useCreateIndex', true);
+//mongoose.set('useUnifiedTopology', true);
+
+// connecting MongoDB database
+mongoose.Promise = global.Promise;
+mongoose.connect(dbConfig.db).then(() =>{
+  console.log('Database successfully connected!')
+},
+  error => {
+    console.log('Could not connect to database:' + error)
+  }
+)
+
+// create express object
 const app = express();
-// after creating the app, add cors as a middleware
-// first import cors and add to the application by using
-// app object - app.use() method
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
 app.use(cors());
+app.use('/applicants', applicantRoute);
 
-// listen to a specific route with app.use
-// the first argument is the path that the application will listen to
-// and the second argument is a callback function that will run when then
-// the application serves the path
-// add handler for server homepage
-// app.get('/', (req, res) =>{
-//   res.send('<h1> HI,<br>I STARTED TO HANDLE YOUR REQUESTS..</h1>')
-// })
-// add a login handler
-app.use('/login', (req, res) => {
-  res.send({
-    token:'test123'
-  });
-});
+// define to listen to the port
+const port = process.env.PORT || 4000;
+const server = app.listen(port, () =>{
+  console.log('Server connected to port '+ port)
+} )
 
-// listen to the port 8080
-app.listen(8080, () =>{
-  console.log('Server started on port 8080...')
-});
+// define server errors
+app.use((req, res, next) => {
+  res.status(404).send('Error 404!')
+})
 
-// get back to Login.js and edit the react source code
+app.use(function (err, req, res, next) {
+  console.error(err.message);
+  if (!err.statusCode) err.statusCode = 500;
+  res.status(err.statusCode).send(err.message);
+})
+
+// now start the server by typing
+// npm start - in the nodejs root directory
