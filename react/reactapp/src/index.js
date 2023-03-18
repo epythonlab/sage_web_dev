@@ -3,12 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import required css file
 import './bmi.css';
-import App from './App';
+import App from './App2';
 import AjaxApi from './AjaxApi';
+import ApplicationForm from './components/Dashboard/ApplicationForm'
 // import your newly created function component here
 import BmiCalculator from './Bmi';
-
-import Login from './components/login/Login'; // Login component from components
 
 import reportWebVitals from './reportWebVitals';
 
@@ -17,6 +16,7 @@ root.render(
 
   <React.StrictMode>
       <App />
+
 
   </React.StrictMode>
 );
