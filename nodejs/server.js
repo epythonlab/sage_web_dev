@@ -3,32 +3,18 @@
     -create the server.js in the nodejs project
     root directory
 */
-
 // import required modules
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors')
 const bodyParser = require('body-parser');
-const dbConfig = require('./database/db') // import the db.js module
+const connectDB  = require('./database/config')
 
 // import routes of applicant
 const applicantRoute = require('./routes/applicant.routes');
 
-// configure the MongoDB database
-//mongoose.set('useNewUrlParser', true);
-//mongoose.set('useFindAndModify', true);
-//mongoose.set('useCreateIndex', true);
-//mongoose.set('useUnifiedTopology', true);
-
-// connecting MongoDB database
-mongoose.Promise = global.Promise;
-mongoose.connect(dbConfig.db).then(() =>{
-  console.log('Database successfully connected!')
-},
-  error => {
-    console.log('Could not connect to database:' + error)
-  }
-)
+// Connect Database
+connectDB();
 
 // create express object
 const app = express();
