@@ -13,8 +13,6 @@ import UseToken from './components/useToken';
 import ApplicationForm from './components/Dashboard/ApplicationForm'
 import Navbar from './components/Header/Navbar'
 
-
-
 /* Add BrowserRouter, then add a Routes component as a child
    in the return method
    inside of Switch, add a Route with a path for each component
@@ -23,7 +21,6 @@ import Navbar from './components/Header/Navbar'
 /* you can modify the following component */
 
 function App() {
-
 
   return (
     <>
@@ -37,6 +34,10 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/application" element={<ApplicationForm />}>
+        </Route>
+      </Routes>
+      <Routes>
+        <Route path="/list-applicants" element={<ApplicationForm />}>
         </Route>
       </Routes>
       </BrowserRouter>

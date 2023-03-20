@@ -6,7 +6,7 @@
 */
 module.exports = {
   // change the host name when deploying
-  db: 'mongodb://0.0.0.0:27017/sagedb'
+  db: 'mongodb://127.0.0.1:27017/sagedb'
 }
 
 // in this you have defined the MongoDB database and named it

@@ -3,7 +3,7 @@
 // just checkout the css file in nav.css and modify the layout
 
 import React, {useState, useEffect} from 'react'
-import { BrowserRouter, NavLink } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 import './nav.css'
 
 export default function Navbar() {
@@ -37,9 +37,9 @@ export default function Navbar() {
       {(toggleMenu || screenWidth > 500) && (
       <ul className="list">
       <BrowserRouter>
-      <NavLink to='/application'>
+      <Link to={'/application'}>
         <li className="items">Application</li>
-      </NavLink>
+      </Link>
       </BrowserRouter>
 
         <li className="items">List Applicants</li>

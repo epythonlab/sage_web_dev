@@ -32,14 +32,15 @@ let applicantSchema = new Schema({
   last_name: {
     type: String
   },
-  gender: {
-    type: String
-  },
   email: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   phone_number: {
+    type: String
+  },
+  gender: {
     type: String
   },
   date_updated: {
