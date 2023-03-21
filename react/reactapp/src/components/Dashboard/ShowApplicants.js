@@ -9,7 +9,26 @@ import {Link} from 'react-router-dom'
 
 function ShowApplicants(){
 
-  /
+  // define state variable to store data from api
+  const [applicants, setApplicants] = useState([]);
+
+  // add title 
+  useEffect(() =>{
+    document.title ='Aplicants List';
+  })
+
+  // API: get data from mongoDB database
+  useEffect(() =>{
+    axios.get('http://localhost:4000/applicants/list-applicants')
+    .then((res) =>{
+      setApplicants(res.data); // set api data to useState as an array
+    })
+    .catch(err => { // catch error message
+      console.log('Data not found.' +err.message)
+    });
+  }, []);
+
+  //console.log(applicants)
 
   return (
 
@@ -36,10 +55,27 @@ function ShowApplicants(){
 
           add a unique key to the returned component of each tr as prop
           */}
-          <tbody>
+          {applicants.map(data =>(
+           <tr key={data._id}>
+             <td>{data._id}</td>
+             <td>{data.first_name}</td>
+             <td>{data.last_name}</td>
+             <td>{data.gender}</td>
+             <td>{data.phone_number}</td>
+             <td>{data.email}</td>
+             <td>{data.date_updated}</td>
+             <td>
+              <Link className="edit-link" to={"/edit-applicant/" + data._id}>
+                <i className="fa-solid fa-pen-to-square"></i></Link>
 
-          {/* here will display data in a table row */}
-          </tbody>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+              <Link className="edit-link" to={"/delete-applicant/" + data._id}>
+                <i className="fa-sharp fa-solid fa-trash" style={{color:'#f41032'}}></i>
+              </Link>
+             </td>
+           </tr>
+         ))}
+        </tbody>
       </table>
     </div>
   )
