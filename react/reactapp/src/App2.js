@@ -11,6 +11,7 @@ import Login from './components/login/Login'; // Login component from components
 import Dashboard from './components/Dashboard/Dashboard' // import Dashboard component
 import UseToken from './components/useToken';
 import ApplicationForm from './components/Dashboard/ApplicationForm'
+import ShowApplicants from './components/Dashboard/ShowApplicants'
 import Navbar from './components/Header/Navbar'
 
 /* Add BrowserRouter, then add a Routes component as a child
@@ -37,7 +38,7 @@ function App() {
         </Route>
       </Routes>
       <Routes>
-        <Route path="/list-applicants" element={<ApplicationForm />}>
+        <Route path="/list-applicants" element={<ShowApplicants />}>
         </Route>
       </Routes>
       </BrowserRouter>

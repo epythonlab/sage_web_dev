@@ -36,13 +36,15 @@ export default function Navbar() {
     <nav>
       {(toggleMenu || screenWidth > 500) && (
       <ul className="list">
-      <BrowserRouter>
-      <Link to={'/application'}>
-        <li className="items">Application</li>
-      </Link>
-      </BrowserRouter>
+        <BrowserRouter>
+          <Link to={'/application'}>
+            <li className="items">Application</li>
+          </Link>
+          <Link to={'/list-applicants'}>
+            <li className="items">Show Applicants</li>
+          </Link>
+        </BrowserRouter>
 
-        <li className="items">List Applicants</li>
     </ul>
       )}
 
