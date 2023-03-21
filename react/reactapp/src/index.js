@@ -5,7 +5,6 @@ import './index.css';
 import './bmi.css';
 import App from './App2';
 import AjaxApi from './AjaxApi';
-import ApplicationForm from './components/Dashboard/ApplicationForm'
 // import your newly created function component here
 import BmiCalculator from './Bmi';
 

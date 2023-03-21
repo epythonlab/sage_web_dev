@@ -26,6 +26,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 app.use('/applicants', applicantRoute);
 
+
 // define to listen to the port
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () =>{
