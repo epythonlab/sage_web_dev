@@ -58,8 +58,9 @@ function ApplicationForm(){
 //console.log({formValues})
   // return the form layout
   return (
-    <div className="form-container">
-      <div className="title">Application Form</div>
+    <div className='form-wraper'>
+      <div className="form-container">
+        <div className="title">Application Form</div>
         <form onSubmit={handleSubmit} >
           <div className="user__details">
             <div className="input__box">
@@ -103,6 +104,7 @@ function ApplicationForm(){
             <input type="submit" value='Apply' />
           </div>
         </form>
+      </div>
     </div>
   );
 }

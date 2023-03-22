@@ -10,9 +10,10 @@ import './App.css';
 import Login from './components/login/Login'; // Login component from components
 import Dashboard from './components/Dashboard/Dashboard' // import Dashboard component
 import UseToken from './components/useToken';
+import Navbar from './components/Header/Navbar'
 import ApplicationForm from './components/Dashboard/ApplicationForm'
 import ShowApplicants from './components/Dashboard/ShowApplicants'
-import Navbar from './components/Header/Navbar'
+import EditApplicant from './components/Dashboard/EditApplicant'
 
 /* Add BrowserRouter, then add a Routes component as a child
    in the return method
@@ -29,18 +30,23 @@ function App() {
     <div className="container">
 
       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<ApplicationForm />}>
-        </Route>
-      </Routes>
-      <Routes>
-        <Route path="/application" element={<ApplicationForm />}>
-        </Route>
-      </Routes>
-      <Routes>
-        <Route path="/list-applicants" element={<ShowApplicants />}>
-        </Route>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<ApplicationForm />}>
+          </Route>
+        </Routes>
+        <Routes>
+          <Route path="/application" element={<ApplicationForm />}>
+          </Route>
+        </Routes>
+        <Routes>
+          <Route path="/list-applicants" element={<ShowApplicants />}>
+          </Route>
+        </Routes>
+
+        <Routes>
+          <Route path="/edit-applicant/:id" element={<EditApplicant />}>
+          </Route>
+        </Routes>
       </BrowserRouter>
     </div>
   </>
