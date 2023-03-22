@@ -43,7 +43,7 @@ function ShowApplicants(){
             <th>Gender</th>
             <th>Phone Number</th>
             <th>Email</th>
-            <th>Updated Date</th>
+            <th>Last Updated</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -55,9 +55,9 @@ function ShowApplicants(){
 
           add a unique key to the returned component of each tr as prop
           */}
-          {applicants.map(data =>(
+          {applicants.map((data, i) =>(
            <tr key={data._id}>
-             <td>{data._id}</td>
+             <td>{++i}</td>
              <td>{data.first_name}</td>
              <td>{data.last_name}</td>
              <td>{data.gender}</td>
@@ -65,9 +65,8 @@ function ShowApplicants(){
              <td>{data.email}</td>
              <td>{data.date_updated}</td>
              <td>
-              <Link className="edit-link" to={"/edit-applicant/" + data._id}>
+              <Link className="edit-link" to={`/edit-applicant/${data._id}`}>
                 <i className="fa-solid fa-pen-to-square"></i></Link>
-
                 &nbsp;&nbsp;&nbsp;&nbsp;
               <Link className="edit-link" to={"/delete-applicant/" + data._id}>
                 <i className="fa-sharp fa-solid fa-trash" style={{color:'#f41032'}}></i>

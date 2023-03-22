@@ -13,13 +13,7 @@ body {
 	overflow: hidden;
 }
 
-.container {
-	display: flex;
-	align-items: center;
-  justify-content: center;
-  height: 100vh;
-	min-width: 100%;
-}
+
 
 .screen {
 	background: linear-gradient(90deg, #a7682c, #7a3c16);

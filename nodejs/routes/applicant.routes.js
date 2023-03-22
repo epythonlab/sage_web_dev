@@ -34,5 +34,25 @@ router.get('/list-applicants', (req, res) => {
 
 // url: http://localhost:4000/applicants/list-applicants
 
+/* Update applicant data
+  First: get a single applicant data by ID
+*/
+router.get('/update-applicant/:id', (req, res) =>{
+  // findById() takes a single parameter, the document id.
+  // it returns a promise that resolves to the Mongoose document
+  // if MongoDB found a document with the given id
+  // or null if no document was found.
+  applicantSchema.findById(req.params.id)
+    .then(data => res.json(data))
+    .catch(err => res.status(404).json({dataError: 'Data not found in this id'}))
+});
+// url: http://localhost:4000/applicants/update-applicant/document_id
+
+// update a specified applicant data
+router.put('/update-applicant/:id', (req, res) => {
+  applicantSchema.findByIdAndUpdate(req.params.id, req.body)
+    .then(data => res.json({ msg: 'Data updated successfully' }))
+    .catch(err => res.status(400).json({ error: 'Unable to update this data' }));
+});
 // export the router
 module.exports = router
