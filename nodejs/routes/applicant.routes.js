@@ -48,11 +48,19 @@ router.get('/update-applicant/:id', (req, res) =>{
 });
 // url: http://localhost:4000/applicants/update-applicant/document_id
 
-// update a specified applicant data
+// update a specified applicant data using PUT API method
 router.put('/update-applicant/:id', (req, res) => {
   applicantSchema.findByIdAndUpdate(req.params.id, req.body)
     .then(data => res.json({ msg: 'Data updated successfully' }))
     .catch(err => res.status(400).json({ error: 'Unable to update this data' }));
 });
+
+/* Delete a specific applicant data by id requested by api */
+router.delete('/delete-applicant/:id', (req, res) => {
+  applicantSchema.findByIdAndRemove(req.params.id, req.body)
+    .then(data => res.json({msg:'Data is successfully deleted.'}))
+    .catch(err => res.status(400).json({error: 'Data not deleted'}));
+});
+
 // export the router
 module.exports = router

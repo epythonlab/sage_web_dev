@@ -10,7 +10,7 @@ import './App.css';
 import Login from './components/login/Login'; // Login component from components
 import Dashboard from './components/Dashboard/Dashboard' // import Dashboard component
 import UseToken from './components/useToken';
-import Navbar from './components/Header/Navbar'
+import Navbar from './components/navbar/Navbar'
 import ApplicationForm from './components/Dashboard/ApplicationForm'
 import ShowApplicants from './components/Dashboard/ShowApplicants'
 import EditApplicant from './components/Dashboard/EditApplicant'
@@ -28,9 +28,7 @@ function App() {
     <>
     <Navbar />
     <div className="container">
-
-      <BrowserRouter>
-        <Routes>
+       <Routes>
           <Route path="/" element={<ApplicationForm />}>
           </Route>
         </Routes>
@@ -47,7 +45,6 @@ function App() {
           <Route path="/edit-applicant/:id" element={<EditApplicant />}>
           </Route>
         </Routes>
-      </BrowserRouter>
     </div>
   </>
   );

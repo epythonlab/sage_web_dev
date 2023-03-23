@@ -8,13 +8,13 @@ function EditApplicant(){
   // define states
   const [applicant, setApplicant] = useState([])
   const {id} = useParams();
-  /* useParams is one of the several react hooks in ract router
+  /* useParams is one of the several react hooks in react router
     it used to retreive route paramaters from the component
     rendered by the matching route
   */
    // add title 
   useEffect(() =>{
-    document.title ='Aplicants List';
+    document.title ='Edit applicant';
   })
 
   // API: get a single applicant data by ID
