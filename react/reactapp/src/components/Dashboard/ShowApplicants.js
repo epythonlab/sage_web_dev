@@ -154,14 +154,15 @@ function ShowApplicants(){
                                      && onClickDelete(data._id)}}>
                 <i className="fa-sharp fa-solid fa-trash" style={{color:'#f41032'}}></i>
               </Link>
+              
                &nbsp;&nbsp;&nbsp;&nbsp;
               <Link to={`addCourse/${data._id}`}>
                 <i className="fa-solid fa-plus" style={{color: '#1f5122'}}></i>
                 <span className='tooltiptext'> Register new course</span>
               </Link>
-
+                &nbsp;&nbsp;&nbsp;&nbsp;
               <Link to={`getDetail/${data._id}`}>
-                <i className="fa-solid fa-plus" style={{color: '#1f5122'}}></i>
+                <i class="fa-sharp fa-solid fa-circle-info"></i>
               </Link>
              </td>
            </tr>
