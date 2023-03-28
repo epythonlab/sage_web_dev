@@ -3,27 +3,26 @@ h2{
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: white;
-  padding: 30px 0;
+  padding: 20px 0;
+
 }
 
 /* Table Styles */
 
 .table-wrapper{
-    margin: 10px 70px 70px;
-    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+    margin: 50px 20px 20px;
 }
 
 .fl-table {
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: normal;
-    border: none;
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 100%;
-    white-space: nowrap;
-    background-color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
 }
 
 .fl-table td, .fl-table th {
@@ -60,8 +59,10 @@ h2{
 @media (max-width: 767px) {
   .fl-table {
       display: block;
-      width: 100%;
+      min-width: 100%;
+      margin: 0;
   }
+  
   .table-wrapper:before{
       content: "Scroll horizontally >";
       display: block;
@@ -69,6 +70,7 @@ h2{
       font-size: 11px;
       color: white;
       padding: 0 0 10px;
+      
   }
   .fl-table thead, .fl-table tbody, .fl-table thead th {
       display: block;

@@ -3,10 +3,12 @@
 // just checkout the css file in nav.css and modify the layout
 
 import React, {useState, useEffect} from 'react'
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './nav.css'
 
-export default function Navbar() {
+
+function Navbar() {
+
   const [toggleMenu, setToggleMenu] = useState(false)
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
@@ -30,25 +32,21 @@ export default function Navbar() {
     }
 
   }, [])
-
+ 
   return (
-
     <nav>
       {(toggleMenu || screenWidth > 500) && (
-      <ul className="list">
-        <BrowserRouter>
-          <Link to={'/application'}>
-            <li className="items">Application</li>
-          </Link>
-          <Link to={'/list-applicants'}>
-            <li className="items">Show Applicants</li>
-          </Link>
-        </BrowserRouter>
-
-    </ul>
+        <ul className ='list'>
+          <li className='items'>
+            <Link className='link' to="/new-applicant">New Applicant</Link>
+          </li>
+          <li className='items'>
+            <Link className='link' to="/">Show Applicants</Link>
+          </li>
+        </ul>
       )}
-
       <button onClick={toggleNav} className="btn">=</button>
     </nav>
-  )
+  );
 }
+export default Navbar;

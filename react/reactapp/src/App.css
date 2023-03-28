@@ -36,22 +36,5 @@
     transform: rotate(360deg);
   }
 }
-.container {
-  display: block;
-  max-width: 90%;
-  width: 100%;
-  margin: 50px auto;
-  padding: 10px;
-  border-radius: 0 #8c6a55;
-  height: 100%;
-  
-}
 
-@media (max-width: 767px) {
 
-  .container{
-    min-width: 100%;
-    min-height: 100%;
-    margin: 20px auto;
-  }
-}

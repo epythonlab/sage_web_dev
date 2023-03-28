@@ -14,8 +14,6 @@
   --main-grey: #ccc;
   --sub-grey: #d9d9d9;
 }
-
-
 /* form-container and form */
 .form-wraper {
   display: flex;
@@ -24,6 +22,7 @@
   height: 100vh;
   min-width: 100%;
   padding: 10px;
+  margin-top: 50px;
 }
 .form-container {
   max-width: 700px;
@@ -32,7 +31,7 @@
   padding: 25px 30px;
   border-radius: 5px;
   margin-bottom: 50px;
-  background-color: #f2f2f2;
+  background-color: #fff;
 }
 .form-container .title {
   font-size: 25px;
@@ -149,9 +148,9 @@ form .button input:hover {
 
 @media only screen and (max-width: 584px) {
   .form-container {
-    max-width: 100%;
-    height: 77%;
-    margin-top: 5%;
+    min-width: 100%;
+    height: 80%;
+    margin: 0;
     margin-bottom: 25%;
   }
 
@@ -167,6 +166,7 @@ form .button input:hover {
   .form-container form .user__details {
     max-height: 300px;
     overflow-y: scroll;
+    min-width: 100%;
   }
 
   .user__details::-webkit-scrollbar {
