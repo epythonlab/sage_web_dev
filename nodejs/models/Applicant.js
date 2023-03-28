@@ -43,6 +43,7 @@ let applicantSchema = new Schema({
   gender: {
     type: String
   },
+  
   date_updated: {
     type: Date, default: Date.now
   }

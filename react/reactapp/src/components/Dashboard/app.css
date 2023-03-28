@@ -1,0 +1,160 @@
+/* SET Common CSS PROPERTIES */
+/* all */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /*background: linear-gradient(90deg, #8c6a55, #7a3c16); */
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+
+/* container fluid */
+.container{ 
+   width: 100%; 
+   padding: 0; 
+   margin: 0;
+}
+@media (max-width: 767px) {
+
+  .container{
+    min-width: 100%;
+    min-height: 100%;
+  
+  }
+}
+/* css for custom message */
+.info-msg,
+.success-msg,
+.warning-msg,
+.error-msg {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+.info-msg {
+  color: #059;
+  background-color: #BEF;
+}
+.success-msg {
+  color: #270;
+  background-color: #DFF2BF;
+}
+.warning-msg {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+.error-msg {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+/* remove text decoration from hyperlink */
+Link, a{
+  text-decoration: none;
+
+
+}
+
+/* delete button */
+
+.button{
+  font-family:'Open Sans';
+  font-size: 16px;
+  font-weight:400;
+  display:inline-block;
+  color:#FFF;
+  border-radius: .25em;
+  text-shadow: -1px -1px 0px rgba(0,0,0,0.4);
+  cursor: pointer;
+  margin: 10px;
+}
+.condensed {
+  transition:ease-in-out .2s;
+  line-height:24px;
+  padding: 0 8px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+}
+ .primary:hover, .condensed:hover {
+  transform:scale(1.02);
+  box-shadow:2px 2px 5px rgba(0,0,0,0.20), inset 0 0 0 99999px rgba(0,0,0,0.2);
+}
+.new:before,.delete:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size:1rem;
+  padding-right:12px;
+  background:none;
+  color:#FFF;
+  
+}
+
+.delete {
+  background: #c0392b;
+  }
+.delete:before{
+  content: "\f1f8";
+}
+.new{
+  background: #2ecc71;
+}
+.new:before {
+  content: "\f067";
+}
+.primary {
+  line-height:40px;
+  transition:ease-in-out .2s;
+  padding: 0 16px;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.save {
+  background: #3498db;
+  
+}
+.save:before {
+  content: "\f0c7";
+}
+
+.inlineIcon {}
+
+.edit:before, .save:before, .new:before, .cancel:before, .delete:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size:1rem;
+  padding-right:12px;
+  background:none;
+  color:#FFF;
+}
+
+

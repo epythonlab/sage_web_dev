@@ -16,7 +16,6 @@ function EditApplicant(){
   useEffect(() =>{
     document.title ='Edit applicant';
   })
-
   // API: get a single applicant data by ID
   useEffect(() =>{
     // string formatting: template literals are enclosed in backticks
@@ -53,21 +52,20 @@ function EditApplicant(){
         if(res.status ===200){
           alert('A record successfuly updated')
           // Push to /
-          navigate('/list-applicants')
+          navigate('/')
         }else{
           Promise.reject()
         }
       })
       .catch(err => alert('Something went wrong! ' +err.message))
       // Push to /
-      navigate('/list-applicants')
+      navigate('/')
   }
   
-
 	return (
     <div className='form-wraper'>
   		<div className="form-container">
-        <div className="title">Application Form</div>
+        <div className="title">Update Application Form</div>
           <form onSubmit={handleSubmit} >
             <div className="user__details">
               <div className="input__box">
@@ -109,7 +107,7 @@ function EditApplicant(){
               </div>
             </div>
             <div className="button">
-              <input type="submit" value='Update' />
+              <input className="button primary new" type="submit" value='Update' />
             </div>
           </form>
         </div>

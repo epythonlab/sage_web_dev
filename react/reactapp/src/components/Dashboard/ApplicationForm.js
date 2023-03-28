@@ -66,23 +66,23 @@ function ApplicationForm(){
             <div className="input__box">
               <span className="details">First Name</span>
               <input type="text" name='first_name' placeholder="E.g: Asibeh" 
-              value = {formValues.fname} onChange={handleChange} required />
+              defaultValue = "" onChange={handleChange} required />
             </div>
             <div className="input__box">
               <span className="details">Last Name</span>
               <input type="text" name='last_name' placeholder="E.g: Tenager" 
-              value = {formValues.lname} onChange={handleChange} required />
+              defaultValue = "" onChange={handleChange} required />
             </div>
 
             <div className="input__box">
               <span className="details">Email</span>
               <input type="email" name='email' placeholder="asibeh@gmail.com" 
-              value= {formValues.email} onChange={handleChange} required />
+              defaultValue= "" onChange={handleChange} required />
             </div>
             <div className="input__box">
               <span className="details">Phone Number</span>
               <input type="tel" name='phone_number' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
-              value= {formValues.phone} placeholder="092-345-6787" onChange={handleChange} required />
+              defaultValue= "" placeholder="092-345-6787" onChange={handleChange} required />
             </div>
           </div>
           <div className="gender__details" onChange={handleChange}>
@@ -101,7 +101,7 @@ function ApplicationForm(){
             </div>
           </div>
           <div className="button">
-            <input type="submit" value='Apply' />
+            <input className="primary save" type="submit" value='Apply' />
           </div>
         </form>
       </div>
