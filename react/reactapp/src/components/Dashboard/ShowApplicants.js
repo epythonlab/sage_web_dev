@@ -162,7 +162,7 @@ function ShowApplicants(){
               </Link>
                 &nbsp;&nbsp;&nbsp;&nbsp;
               <Link to={`getDetail/${data._id}`}>
-                <i class="fa-sharp fa-solid fa-circle-info"></i>
+                <i className="fa-sharp fa-solid fa-circle-info"></i>
               </Link>
              </td>
            </tr>

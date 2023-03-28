@@ -1,12 +1,12 @@
 /* SET Common CSS PROPERTIES */
 /* all */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -25,7 +25,7 @@ body {
 
   .container{
     min-width: 100%;
-    min-height: 100%;
+    overflow: hidden;
   
   }
 }
@@ -57,8 +57,6 @@ body {
 /* remove text decoration from hyperlink */
 Link, a{
   text-decoration: none;
-
-
 }
 
 /* delete button */
@@ -91,7 +89,6 @@ Link, a{
   padding-right:12px;
   background:none;
   color:#FFF;
-  
 }
 
 .delete {
@@ -145,8 +142,6 @@ Link, a{
 .save:before {
   content: "\f0c7";
 }
-
-.inlineIcon {}
 
 .edit:before, .save:before, .new:before, .cancel:before, .delete:before {
   font-family: FontAwesome;

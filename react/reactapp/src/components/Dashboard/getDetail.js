@@ -7,6 +7,12 @@ function GetDetail(){
 	const [courses, setCourses] = useState([])
 	// get applicant id from the route
 	const {id} = useParams();
+
+	  // add title 
+  useEffect(() =>{
+    document.title ='Course detail of applicant';
+  })
+
 	// applicant detail from api
 	useEffect(() =>{
 		// all courses by applicant id
