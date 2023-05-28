@@ -24,7 +24,7 @@ of your file
  TIP:
     The bigest advantage of functional component is that
     they have your code easily and also make your
-    program easy to read anD understand for others
+    program easy to read and understand for others
 
     - We use react hooks in the functional component
  - beacause react hooks is the re-usability of stateful logic
@@ -32,7 +32,7 @@ of your file
 */
 // import all required modules in the header
 import React, {useState} from 'react';
-
+import './bmi.css';
 // define our own functional component
 function BmiCalculator(){
 
@@ -116,7 +116,7 @@ function BmiCalculator(){
   return (
     <div className='app'>
 
-      <div className='container'>
+      <div className='bmi-container'>
         <h2 className="txtCenter">BMI Calculator </h2>
         <form onSubmit={calcBmi}>
           <div>
@@ -131,7 +131,7 @@ function BmiCalculator(){
             setHeight(event.target.value)}/>
           </div>
           <div>
-            <button type='submit' className='btn'>Calculate </button>
+            <button type='submit' className='bmi-btn'>Calculate </button>
           </div>
         </form>
         <div>
@@ -146,4 +146,4 @@ function BmiCalculator(){
   export default is used to export a single class,
   function or primitve from a script file
 */
-export default BmiCalculator; // don't forget to export your componeNt
+export default BmiCalculator; // don't forget to export your component

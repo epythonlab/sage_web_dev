@@ -6,7 +6,9 @@ import './bmi.css';
 import App from './App2';
 import AjaxApi from './AjaxApi';
 // import your newly created function component here
+import AgeCalculator from './agecalculator';
 import BmiCalculator from './Bmi';
+
 
 import reportWebVitals from './reportWebVitals';
 
@@ -14,7 +16,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <React.StrictMode>
-      <App />
+      <AgeCalculator />
+     
 
 
   </React.StrictMode>
